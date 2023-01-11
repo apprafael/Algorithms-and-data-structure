@@ -4,5 +4,6 @@
         <page name='LinkedList'/>
         <page name='ContainerWithMostWater'/>
         <page name='TrappingRainWater'/>
+        <page name='Typed out string'/>
     </pages>
 </playground>
