@@ -23,7 +23,7 @@ public class LinkedList<T> {
             headNode = nextHead
         }
         
-        head = prevNode //Mark 7
+        head = prevNode
         tail = headNode
     }
 
