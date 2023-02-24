@@ -1,5 +1,6 @@
 public class Node<T> {
     var value: T
+    var next: Node<T>?
     var previous: Node<T>?
     
     init(value: T) {
@@ -8,15 +9,34 @@ public class Node<T> {
 }
 
 public class LinkedList<T> {
+    private var head: Node<T>?
     private var tail: Node<T>?
     
-    public func append(value: T) {
+    func reverseList() {
+        var prevNode: Node<T>? = nil
+        var headNode = head
+        
+        while(headNode != nil) {
+            let nextHead = headNode?.next
+            headNode?.next = prevNode
+            prevNode = headNode
+            headNode = nextHead
+        }
+        
+        head = prevNode //Mark 7
+        tail = headNode
+    }
+
+    func append(value: T) {
         let newNode = Node(value: value)
         if let _ = tail {
-            newNode.previous = tail
+            tail?.next = newNode
+            tail?.previous = tail
             tail = newNode
         } else {
-            tail = newNode
+            head = newNode
+            tail?.previous = head
+            tail = head
         }
     }
 }
@@ -24,11 +44,11 @@ public class LinkedList<T> {
 extension LinkedList: CustomStringConvertible {
     public var description: String {
         var text = "["
-        var node = tail
+        var node = head
         
         while node != nil {
             text += "\(node!.value)"
-            node = node!.previous
+            node = node!.next
             if node != nil { text += ", " }
         }
         return text + "]"
@@ -42,4 +62,6 @@ carBrands.append(value: "Audi")
 carBrands.append(value: "Fiat")
 carBrands.append(value: "Chevrolet")
 carBrands.append(value: "Mercedes")
+print(carBrands)
+carBrands.reverseList()
 print(carBrands)
