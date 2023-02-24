@@ -7,5 +7,6 @@
         <page name='LongestSubstringWithoutRepeatingCharacters'/>
         <page name='Typed out string'/>
         <page name='AlmostPalindrome'/>
+        <page name='TwoSum'/>
     </pages>
 </playground>
