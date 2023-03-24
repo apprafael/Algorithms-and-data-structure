@@ -13,18 +13,15 @@ public class LinkedList<T> {
     private var tail: Node<T>?
     
     func reverseList() {
-        var prevNode: Node<T>? = nil
-        var headNode = head
+        tail = head
+        head = nil
         
-        while(headNode != nil) {
-            let nextHead = headNode?.next
-            headNode?.next = prevNode
-            prevNode = headNode
-            headNode = nextHead
+        while(tail != nil) {
+            let nextHead = tail?.next
+            tail?.next = head
+            head = tail
+            tail = nextHead
         }
-        
-        head = prevNode
-        tail = headNode
     }
 
     func append(value: T) {
