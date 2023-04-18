@@ -9,6 +9,7 @@
         <page name='AlmostPalindrome'/>
         <page name='TwoSum'/>
         <page name='CompactLinkedList'/>
-        <page name='BiggestNotIncludedPositiveNumber'/>
+        <page name='SumAsyncNumbers'/>
+        <page name='ValidParentheses'/>
     </pages>
 </playground>
