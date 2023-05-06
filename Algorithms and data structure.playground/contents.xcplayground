@@ -11,5 +11,6 @@
         <page name='CompactLinkedList'/>
         <page name='SumAsyncNumbers'/>
         <page name='ValidParentheses'/>
+        <page name='MinRemoveToMakeValid'/>
     </pages>
 </playground>
