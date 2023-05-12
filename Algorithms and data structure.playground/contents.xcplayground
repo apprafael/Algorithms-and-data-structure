@@ -12,5 +12,6 @@
         <page name='SumAsyncNumbers'/>
         <page name='ValidParentheses'/>
         <page name='MinRemoveToMakeValid'/>
+        <page name='KthLargestElementInAnArray'/>
     </pages>
 </playground>
